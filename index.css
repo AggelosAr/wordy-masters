@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add  animations on boxes 1. ERROR WORD 2. WIN SCREEN*/
+@keyframes rainbow {
+  100%,
+  0% {
+    color: rgb(255, 0, 0);
+  }
+  8% {
+    color: rgb(255, 127, 0);
+  }
+  16% {
+    color: rgb(255, 255, 0);
+  }
+  25% {
+    color: rgb(127, 255, 0);
+  }
+  33% {
+    color: rgb(0, 255, 0);
+  }
+  41% {
+    color: rgb(0, 255, 127);
+  }
+  50% {
+    color: rgb(0, 255, 255);
+  }
+  58% {
+    color: rgb(0, 127, 255);
+  }
+  66% {
+    color: rgb(0, 0, 255);
+  }
+  75% {
+    color: rgb(127, 0, 255);
+  }
+  83% {
+    color: rgb(255, 0, 255);
+  }
+  91% {
+    color: rgb(255, 0, 127);
+  }
+}
+
+.rainbow-anime {
+  animation: rainbow 4s infinite linear;
+}
+
+
+
+@keyframes move {
+  from {
+    translate: -100px;
+  }
+  to {
+    translate: 100px;
+  }
+  }
+
+@keyframes spin {
+  from {
+    transform:rotate(20deg);
+  }
+  to {
+    transform:rotate(-20deg);
+  }
+    
+}
+
+@keyframes full-spin {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+    
+}
+
+@keyframes opacity-spin {
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+    
+}
+.spinner {
+  animation: full-spin 2.5s infinite linear, opacity-spin 3.5s infinite linear;
+  border: none!important;
+  background-color: rgb(134, 134, 134)!important;
+  box-shadow: -5px -5px 70px 30px silver!important;
+}
+
+.loading {
+  animation: spin 0.5s infinite alternate linear;
+}
+
+.mover {
+  font-size: 130px;
+  
+  animation: move 1.5s infinite alternate;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes colorchange {
+  to {
+    border-color: red;
+  }
+}
+
+.wrong-answer {
+  animation: colorchange 1.5s ease;
+}
+
+.game-board {
+  font-size: xx-large;
+  font-weight: bolder; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+}
+
+.my-title {
+  margin-top: 10px;
+}
+
+.word-row {
+  display: flex;
+  
+}
+
+.first-row {
+  padding-top: 3%;
+  margin-top: 2%;
+  border-top: 3px solid black;
+}
+
+.letter {
+  
+
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  
+  border: 5px solid grey;
+  box-shadow: -5px -5px 12px 1px silver;
+  margin: 10px;
+}
+
